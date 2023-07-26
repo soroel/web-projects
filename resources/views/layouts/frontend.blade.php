@@ -18,12 +18,17 @@
         <div>
             @include('header')
             @include('widget')
-            @include('footer')
+            
 
             @yield('content')
+
+            @include('footer')
+
+    
+
         </div>
-        <script src="{{asset('js/')}}"></script>
-        <script src="{{asset('js/')}}"></script>
+        <script src="{{asset('js/bootstrap5.js')}}"></script>
+        <script src="{{asset('js/jquery-3.7.0.js')}}"></script>
         
     </body>
 </html>

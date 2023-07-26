@@ -1,4 +1,7 @@
 <!--Register-->
+@extends('layouts.frontend')
+
+@section('content')
 <section class="contactSpot bg-white">
     <h2 class="text-center mt-5">
         <strong>Create an Account</strong>
@@ -178,3 +181,4 @@
 </section>
 
   <!--end of register-->
+  @endsection
