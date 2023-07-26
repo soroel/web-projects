@@ -1,1 +1,1 @@
-gym website build using html, css, javascript and php.
+gym website build using laravel framework.

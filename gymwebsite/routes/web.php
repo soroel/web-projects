@@ -1,7 +1,5 @@
 <?php
 
-use App\Http\Controllers\users;
-use App\Http\Controllers\register;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,10 +14,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('welcome');
 });
-//Route::view('home','home');
-//Route::get('home',[users::class,'showHomePage']);
-Route::view('register','register');
-Route::post('register',[register::class,'registerUser']);
-
