@@ -47,7 +47,16 @@
 <section class="contactSpot bg-white">
     <h2 class="text-center mt-5">
         <strong>Login to Account</strong>
-
+  <div>
+    @if($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach($errors->all() as $error) 
+            <li>{{$error}}</li>
+            @endforeach
+        </ul>
+        @endif
+  </div>
     </h2>
     <center>
         <div class="border"></div>
@@ -56,7 +65,9 @@
             <div class="col-md-8">
                 <div class="card formItem">
                     <div class="card-body text-left">
-                        <form method="POST" action="../php/login.php">
+                        <form method="POST" action="{{route('userLogin')}}">
+                            @csrf
+
                             <div class="row">
 
                                         <!--column two-->
@@ -70,6 +81,7 @@
 </span>
 </div>
 <input type="email" name="emailaddress"class="form-control inputField" autofocus="" placeholder="email address">
+<span class="text-danger">@error('emailaddress'){{$message}}@enderror</span>
                                 </div>
 
                             </div>
@@ -88,6 +100,7 @@
 </span>
 </div>
 <input type="password" name="password" class="form-control inputField" autofocus="" placeholder="password">
+<span class="text-danger">@error('password'){{$message}}@enderror</span>
             </div>
 
         </div>

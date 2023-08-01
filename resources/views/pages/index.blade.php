@@ -30,6 +30,7 @@
     </head>
 
     <body>
+    <!--<h2>Hi, {{session('user')}}</h2>-->
 
         <main>
                   <!-- Bannersection-->

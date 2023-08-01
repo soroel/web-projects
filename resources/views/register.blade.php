@@ -9,17 +9,31 @@
     </h2>
     <center>
         <div class="border"></div>
+
         <div class="row contactSpotRow">
+                       
+
             <!--column one-->
             <div class="col-md-8">
                 <div class="card formItem">
                     <div class="card-body text-left">
-                        <form method="POST" action="../php/insertData.php">
-                            <div class="row">
+                        @if(Session::has('success'))
+            <div class="alert alert-success">
+                {{Session::get('success')}}
+            </div>
+            @elseif(Session::has('fail'))
+            <div class="alert alert-danger">
+                {{Session::get('fail')}}
+            </div>
+            @endif
 
-                                <!--first column-->
-                                <div class="col-md-6">
-                                    <div class="input-group mb-3">
+<form method="POST" action="{{route('store')}}">
+@csrf
+    <div class="row">
+
+        <!--first column-->
+            <div class="col-md-6">
+            <div class="input-group mb-3">
 <div class="input-group-prepend">
 <span class="input-group-text" id="basic-addon1">
     <i class="fa fa-user"></i>
@@ -27,6 +41,7 @@
 </span>
 </div>
 <input type="text" name="fullname" class="form-control inputField" autofocus="" placeholder="name">
+<span class="text-danger">@error('fullname'){{$message}}@enderror</span>
                                     </div>
 
                                 </div>
@@ -43,6 +58,7 @@
 </span>
 </div>
 <input type="email" name="emailaddress"class="form-control inputField" autofocus="" placeholder="email address">
+<span class="text-danger">@error('emailaddress'){{$message}}@enderror</span>
                                 </div>
 
                             </div>
@@ -59,6 +75,7 @@
 </span>
 </div>
 <input type="number" name="phonenumber" class="form-control inputField" autofocus="" placeholder="phone number">
+<span class="text-danger">@error('phonenumber'){{$message}}@enderror</span>
             </div>
 
         </div>
@@ -76,6 +93,7 @@
 </span>
 </div>
 <input type="password" name="password" class="form-control inputField" autofocus="" placeholder="password">
+<span class="text-danger">@error('password'){{$message}}@enderror</span>
             </div>
 
         </div>

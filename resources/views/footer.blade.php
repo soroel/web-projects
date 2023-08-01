@@ -1,5 +1,5 @@
 <!--FOOTER SECTION-->
-<footer style="background-image: url(images.links.png);" class="bgimg">
+<footer style="background-image: url('../images/links.png');" class="bgimg">
     <div class="footer-main">
         <div class="container">
             <div class="row">
