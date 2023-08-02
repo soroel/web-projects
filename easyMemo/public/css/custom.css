@@ -1,0 +1,72 @@
+body{
+    background-color:#b22d76;
+    background-size:cover;
+    background-position: center;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 16px;
+    color: white;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+.container{
+    width: 220px;
+    height: 420px;
+    background:#000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    box-sizing: border-box;
+    padding: 70px 30px;
+    border-radius: 10px;
+    box-shadow: 0 15px 25px rgba(0,0,0,.5);
+
+}
+.container input{
+    width: 100%;
+    margin-bottom: 20px;
+    border: none;
+    outline: none;
+    background: none;
+    border-bottom: 1px solid #fff;
+    padding: 5px 0;
+    color: #fff;
+    font-size: 16px;
+}
+.container input::placeholder{
+    color: #fff;
+}
+.container button{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    background: purple;
+    cursor: pointer;
+    border-radius: 5px;
+    color: #fff;
+}
+.container button:hover{
+    background: #fff;
+    color: #000;
+}
+.container a{
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: darkgrey;
+}
+.container a:hover{
+    color: #fff;
+}
+.container h1{
+    margin: 0;
+    padding-top: 0;
+    text-align: center;
+    font-size: 30px;
+    color: #fff;
+}
