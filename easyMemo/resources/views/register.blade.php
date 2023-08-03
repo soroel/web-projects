@@ -16,7 +16,7 @@
     <br><br>
         <input type="text" name="username" id="username" placeholder="Username"><br><br>
         <input type="password" name="password" id="password" placeholder="Password"><br><br>
-        <button type="submit" value="Register">Register</button><br><br
+        <button type="submit" value="Register">Register</button><br><br>
         <p>Already have an account? <a href="login">Login</a></p>
     </form>
     

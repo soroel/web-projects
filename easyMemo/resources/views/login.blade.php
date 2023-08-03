@@ -11,13 +11,14 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="dashboard" method="post">
-        <input type="text" name="username" id="username" placeholder="Username">
+    <form action="dashboard" method="post" class="container">
+        @csrf
+        <h1>Enter your password</h1>  <br><br>      
         <input type="password" name="password" id="password" placeholder="Password">
-        <input type="submit" value="Login">
-
+        <button type="submit" value="Login">Login</button><br><br>
+        <p>Don't have an account? <a href="register">Register</a></p>
     </form>
-    <p>Don't have an account? <a href="register">Register</a></p>
+    
 </body>
 </html>
 

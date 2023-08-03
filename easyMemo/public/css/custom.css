@@ -24,6 +24,10 @@ body{
     box-shadow: 0 15px 25px rgba(0,0,0,.5);
 
 }
+.container p{
+   
+    font-size: small;
+}
 .container input{
     width: 100%;
     margin-bottom: 20px;
@@ -69,4 +73,21 @@ body{
     text-align: center;
     font-size: 30px;
     color: #fff;
+}
+#notepad {
+    position: relative;
+    background-color: #000;
+    font-size: 16px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    resize: none;
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+}
+.dashboard{
+   
+    
+    position: absolute;
+   
 }
