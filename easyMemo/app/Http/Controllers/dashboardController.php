@@ -12,7 +12,13 @@ class dashboardController extends Controller
      */
     public function index()
     {
-        //
+        //create a variable and store all the notes in it from the database
+
+        $notes = Note::all();
+
+        //return a view and pass in the above variable
+        return view('index')->with('notes',$notes);
+
     }
 
     /**
@@ -51,6 +57,9 @@ class dashboardController extends Controller
     public function show(string $id)
     {
         //
+        $note = Note::find($id);
+        return view('dashboard')->with('note',$note);
+
     }
 
     /**
@@ -59,6 +68,8 @@ class dashboardController extends Controller
     public function edit(string $id)
     {
         //
+        $note = Note::find($id);
+        return view('edit')->with('note',$note);
     }
 
     /**
@@ -66,7 +77,20 @@ class dashboardController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        //validate the data
+        $request->validate([
+            'memo'=>'required',
+        ]);
+
+        //store in the database
+        $note = Note::find($id);
+        $note->content = $request->memo;
+        $note->save();
+
+        //redirect to another page
+        return redirect()->route('dashboard.index', $note->id)->with('success','Note updated successfully.');
+
+       
     }
 
     /**
@@ -75,5 +99,9 @@ class dashboardController extends Controller
     public function destroy(string $id)
     {
         //
+        $note = Note::find($id);
+        $note->delete();
+        return redirect()->route('dashboard.index')->with('success','Note deleted successfully.');
+
     }
 }

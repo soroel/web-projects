@@ -26,6 +26,9 @@ Route::get('create',function(){
 Route::post('login',[login::class,'userLogin']);
 Route::get('register',[register::class,'userRegister']);
 Route::resource('dashboard',dashboardController::class);
+Route::get('edit',function(){
+    return view('edit');
+});
 
 
 
