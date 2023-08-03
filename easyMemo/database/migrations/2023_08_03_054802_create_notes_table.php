@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('notes', function (Blueprint $table) {
             $table->id();
-            $table->longtext('content');
+            $table->longtext('content')->nullable();
             $table->timestamps();
         });
     }
