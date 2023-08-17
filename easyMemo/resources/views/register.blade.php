@@ -11,7 +11,8 @@
 
 </head>
 <body>    
-        <form action="register" method="post" class="container">
+        <form action="create" method="post" class="container">
+        @csrf
             <h1>Create an account</h1>
     <br><br>
         <input type="text" name="username" id="username" placeholder="Username"><br><br>

@@ -20,17 +20,24 @@ use App\Http\Controllers\dashboardController;
 Route::get('/', function () {
     return view('login');
 });
-Route::get('create',function(){ 
+Route::post('create',function(){ 
     return view('create');
 });
-Route::post('login',[login::class,'userLogin']);
+Route::get('login',[login::class,'userLogin']);
 Route::get('register',[register::class,'userRegister']);
 Route::resource('dashboard',dashboardController::class);
 Route::get('edit',function(){
     return view('edit');
 });
+Route::post('register',[register::class,'store'])->name('store');
+Route::post('login',[login::class,'userLogin'])->name('userLogin');
 
 
 
 
 
+
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
